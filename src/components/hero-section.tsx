@@ -26,10 +26,17 @@ export function HeroSection() {
     >
       {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-accent/10 rounded-full blur-3xl animate-pulse" />
         <div
-          className="absolute bottom-20 right-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "1s" }}
+          className="absolute top-16 left-8 w-48 h-48 bg-accent/15 blur-3xl"
+          style={{ animation: "blob-morph 8s ease-in-out infinite" }}
+        />
+        <div
+          className="absolute bottom-16 right-8 w-56 h-56 bg-secondary/12 blur-3xl"
+          style={{ animation: "blob-morph 11s 2s ease-in-out infinite" }}
+        />
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/8 blur-3xl"
+          style={{ animation: "blob-morph 14s 4s ease-in-out infinite" }}
         />
       </div>
       {/* Main Content */}

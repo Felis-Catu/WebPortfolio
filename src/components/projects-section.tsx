@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
+import { type StaticImageData } from "next/image";
 import johnny from "@/app/images/johny.png";
-import type { StaticImageData } from "next/image";
 
 interface Project {
   id: number;
@@ -15,6 +15,11 @@ interface Project {
   cat: string;
   github?: string;
   demo?: string;
+}
+
+function getImageSrc(image: string | StaticImageData): string {
+  if (typeof image === "string") return image;
+  return image.src;
 }
 
 const projects: Project[] = [
@@ -126,7 +131,7 @@ export function ProjectsSection() {
                     {project.cat}
                   </div>*/}
                   <img
-                    src={project.image}
+                    src={getImageSrc(project.image)}
                     alt={project.name}
                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
@@ -195,7 +200,7 @@ export function ProjectsSection() {
           >
             <div className="relative">
               <img
-                src={selectedProject.image}
+                src={getImageSrc(selectedProject.image)}
                 alt={selectedProject.name}
                 className="w-full h-64 object-cover"
               />

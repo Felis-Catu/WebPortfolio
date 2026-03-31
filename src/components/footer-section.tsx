@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Twitter, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 export function FooterSection() {
   const socialLinks = [
