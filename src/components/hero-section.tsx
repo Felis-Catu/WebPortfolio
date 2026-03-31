@@ -22,7 +22,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden grain-texture pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden grain-texture pt-28 md:pt-20"
     >
       {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

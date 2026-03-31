@@ -24,18 +24,18 @@ export function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-4">
-      <div className="max-w-7xl mx-auto bg-card/80 backdrop-blur-lg soft-shadow rounded-full px-8 py-3 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-3 md:py-4">
+      <div className="max-w-7xl mx-auto bg-card/80 backdrop-blur-lg soft-shadow rounded-full px-5 md:px-8 py-3 flex items-center justify-between">
         {/* Name/Logo */}
         <button
           onClick={() => scrollToSection("home")}
-          className="font-display text-xl font-bold bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent hover:scale-105 transition-transform"
+          className="font-display text-base md:text-xl font-bold bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent hover:scale-105 transition-transform shrink-0"
         >
           Felicity Ann Malong
         </button>
 
-        {/* Navigation Links */}
-        <div className="flex items-center gap-8">
+        {/* Navigation Links — hidden on mobile */}
+        <div className="hidden md:flex items-center gap-8">
           <button
             onClick={() => scrollToSection("home")}
             className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors"
@@ -80,6 +80,19 @@ export function Navigation() {
             )}
           </button>
         </div>
+
+        {/* Mobile: theme toggle only */}
+        <button
+          onClick={toggleTheme}
+          className="md:hidden p-2 rounded-full bg-accent/10 hover:bg-accent/20 transition-all duration-300"
+          aria-label="Toggle theme"
+        >
+          {mounted && theme === "dark" ? (
+            <Sun className="w-4 h-4 text-accent" />
+          ) : (
+            <Moon className="w-4 h-4 text-accent" />
+          )}
+        </button>
       </div>
     </nav>
   );

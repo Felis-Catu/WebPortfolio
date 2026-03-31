@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import { type StaticImageData } from "next/image";
 import johnny from "@/app/images/johny.png";
+import nesthost from "@/app/images/Analytics QualLeads.png";
 
 interface Project {
   id: number;
@@ -29,8 +30,7 @@ const projects: Project[] = [
     description:
       "A property management dashboard integrating multiple applications l. Made for NestHost.",
     tech: ["React", "Next.js", "TypeScript", "Stripe"],
-    image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+    image: nesthost,
     color: "from-rose-100 to-pink-100",
     cat: "😺",
   },
